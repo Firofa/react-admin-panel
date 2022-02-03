@@ -6,8 +6,6 @@ import '../../app.css'
 import {userData} from "../../dummyData"
 
 // Components
-import Topbar from '../../components/topbar/Topbar';
-import Sidebar from '../../components/sidebar/Sidebar';
 import FeaturedInfo from '../../components/featuredInfo/FeaturedInfo';
 import Chart from '../../components/chart/Chart';
 import WidgetSm from '../../components/widgetSm/WidgetSm';
@@ -17,9 +15,6 @@ export default function Home() {
     
   return (
     <>
-        <Topbar />
-        <div className='container'>
-            <Sidebar />
             <div className='home'>
                 <FeaturedInfo />
                 <Chart data={userData} title="User Analytics" grid dataKey="Active User" />
@@ -28,7 +23,7 @@ export default function Home() {
                     <WidgetLg />
                 </div>
             </div>
-        </div>
+
     </>
   );
 }

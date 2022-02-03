@@ -1,17 +1,28 @@
+// Css
 import './userList.css'
 import '../../app.css'
- 
+
+// Dummy Data
+import { userRows } from '../../dummyData';
+
 // Material UI
 import { DataGrid } from '@mui/x-data-grid';
+import { Link } from 'react-router-dom';
 
 // Material Icon
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 // Components
-import Topbar from '../../components/topbar/Topbar';
-import Sidebar from '../../components/sidebar/Sidebar';
+import { useState } from 'react';
 
  export default function UserList() {
+
+    const [data, setData] = useState(userRows);
+
+    const handleDelete = (id) => {
+        setData(data.filter(item=>item.id !== id))
+    }
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         { field: 'user', headerName: 'User', width: 200, renderCell: (params) => {
@@ -40,105 +51,30 @@ import Sidebar from '../../components/sidebar/Sidebar';
             renderCell: (params) => {
                 return (
                     <>
-                        <button className="userListEdit">Edit</button>
-                        <DeleteOutlineIcon className="userListDelete" />
+                        <Link to={"/user/"+params.row.id} >
+                            <button className="userListEdit">Edit</button>
+                        </Link>
+                        <DeleteOutlineIcon className="userListDelete" onClick={()=> handleDelete(params.row.id)} />
                     </>
                 );
             }
         }
       ];
       
-      const rows = [
-        { 
-            id: 1, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 2, 
-            username: 'Jon Winter',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 3, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 4, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 5, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 6, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 7, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 8, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-        { 
-            id: 9, 
-            username: 'Jon Snow',   
-            avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-            email: 'jonsnow@gmail.com',
-            status: 'active',
-            transaction: '$120.00'
-        },
-      ];
-
    return (
        <>   
-        <Topbar />
-        <div className='container'>
-            <Sidebar />
             <div className="userList">
+                
                 <DataGrid
-                    rows={rows}
+                    rows={data}
                     columns={columns}
                     pageSize={8}
                     rowsPerPageOptions={[5]}
                     checkboxSelection
                     disableSelectionOnClick
                 />
+
             </div>
-        </div>
        </>
 
    );
