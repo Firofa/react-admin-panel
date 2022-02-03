@@ -1,5 +1,5 @@
-# Project ini merupakan hasil belajar membuat react admin panel
-# Mengikuti tutorial dari Youtube: Lama Dev.
+# This project is the result of learning how to create a react admin panel
+# Following tutorial from Youtube by Lama Dev.
 
 Original Github Link : https://github.com/safak/youtube/tree/react-admin \
 Original Youtube Video Tutorial : https://www.youtube.com/watch?v=aTPkos3LKi8&t=1370s
