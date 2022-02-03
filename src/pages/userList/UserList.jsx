@@ -1,6 +1,5 @@
 // Css
 import './userList.css'
-import '../../app.css'
 
 // Dummy Data
 import { userRows } from '../../dummyData';

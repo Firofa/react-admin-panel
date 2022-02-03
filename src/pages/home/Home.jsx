@@ -1,6 +1,5 @@
 // Css
 import './home.css'
-import '../../app.css'
 
 // JSON
 import {userData} from "../../dummyData"

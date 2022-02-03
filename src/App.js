@@ -1,3 +1,6 @@
+// CSS
+import './app.css'
+
 import {
   BrowserRouter,
   Routes,
@@ -11,6 +14,9 @@ import Topbar from "./components/topbar/Topbar";
 // Pages
 import Home from "./pages/home/Home";
 import UserList from "./pages/userList/UserList";
+import User from './pages/user/User';
+
+
 
 function App() {
   return (
@@ -18,10 +24,11 @@ function App() {
       <Topbar />
         <div className='container'>
           <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/users" element={<UserList />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/users" element={<UserList />} />
+            <Route path="/user/:userId" element={<User />} />
+          </Routes>
         </div>
 
      </BrowserRouter>
