@@ -9,12 +9,17 @@ import MailIcon from '@mui/icons-material/Mail';
 import PlaceIcon from '@mui/icons-material/Place';
 import PublishIcon from '@mui/icons-material/Publish';
 
+// React Router DOM
+import { Link } from 'react-router-dom';
+
 export default function User() {
   return (
     <div className="user">
         <div className='userTitleContainer'>
             <h1 className="userTitle">Edit User</h1>
+            <Link to="/newUser">
             <button className="userAddButton">Create</button>
+            </Link>
         </div>
         <div className="userContainer">
             <div className="userShow">

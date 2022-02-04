@@ -15,6 +15,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import WorkIcon from '@mui/icons-material/Work';
 import LegendToggleIcon from '@mui/icons-material/LegendToggle';
 import ReportIcon from '@mui/icons-material/Report';
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   return (
@@ -23,9 +24,11 @@ export default function Sidebar() {
             <div className="sidebarMenu">
               <h3 className="sidebarTitle">Dashboard</h3>
                 <ul className="sidebarList">
-                  <li className="sidebarListItem active">
-                    <HomeIcon className="sidebarIcon" /> Home
-                  </li>
+                  <Link to="/" className='link'>
+                    <li className="sidebarListItem active">
+                        <HomeIcon className="sidebarIcon" /> Home
+                    </li>
+                  </Link>
                   <li className="sidebarListItem">
                     <AnalyticsIcon className="sidebarIcon" /> Analytics
                   </li>
@@ -37,9 +40,11 @@ export default function Sidebar() {
             <div className="sidebarMenu">
               <h3 className="sidebarTitle">Quick Menu</h3>
                 <ul className="sidebarList">
-                  <li className="sidebarListItem">
-                    <PeopleIcon className="sidebarIcon" /> Users
-                  </li>
+                  <Link to="/users" className='link'>
+                    <li className="sidebarListItem">
+                      <PeopleIcon className="sidebarIcon" /> Users
+                    </li>
+                  </Link>
                   <li className="sidebarListItem">
                     <StorefrontIcon className="sidebarIcon" /> Products
                   </li>
