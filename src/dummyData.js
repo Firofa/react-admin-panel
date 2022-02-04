@@ -115,3 +115,78 @@ export const userRows = [
         transaction: '$120.00'
     },
   ];
+
+  export const productRows = [
+    { 
+        id: 1, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 2, 
+        name: 'Jon Winter',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 3, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 4, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 5, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 6, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 7, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 8, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+    { 
+        id: 9, 
+        name: 'Apple',   
+        img: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+        stock: 212,
+        status: 'active',
+        price: '$120.00'
+    },
+  ];
